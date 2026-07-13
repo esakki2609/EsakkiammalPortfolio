@@ -1,0 +1,85 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --brand: #588f27;
+  --brand-dark: #3f6b1a;
+  --brand-deep: #2d4d12;
+  --brand-soft: #e8f0dc;
+  --brand-mist: #f3f7ec;
+  --ink: #141810;
+  --muted: #5a6350;
+  --line: #c5d4ae;
+  --surface: #ffffff;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  color: var(--ink);
+  background:
+    radial-gradient(ellipse 80% 50% at 100% -10%, rgba(88, 143, 39, 0.18), transparent 55%),
+    radial-gradient(ellipse 60% 40% at 0% 100%, rgba(88, 143, 39, 0.12), transparent 50%),
+    linear-gradient(180deg, var(--brand-mist) 0%, #fafbf7 45%, var(--brand-soft) 100%);
+  min-height: 100vh;
+  font-family: var(--font-body), sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: var(--font-display), serif;
+  letter-spacing: -0.02em;
+}
+
+@keyframes rise {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.animate-rise {
+  animation: rise 0.7s ease-out both;
+}
+
+.animate-rise-delay {
+  animation: rise 0.8s ease-out 0.15s both;
+}
+
+.animate-fade {
+  animation: fade 0.9s ease-out both;
+}
+
+.page-shell {
+  width: min(1080px, calc(100% - 2.5rem));
+  margin-inline: auto;
+}
+
+.brand-rule {
+  height: 2px;
+  width: 3.5rem;
+  background: var(--brand);
+}
