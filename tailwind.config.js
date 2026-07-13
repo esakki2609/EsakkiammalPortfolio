@@ -1,16 +1,26 @@
+/** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ["./src/**/*.{js,jsx,ts,tsx}"],
+  content: [
+    "./app/**/*.{js,jsx,ts,tsx}",
+    "./components/**/*.{js,jsx,ts,tsx}",
+  ],
   theme: {
     extend: {
-      animation: {
-        "fade-in": "fadeIn 1s ease-in",
-        "fade-in-delay-2": "fadeIn 2s ease-in",
-      },
-      keyframes: {
-        fadeIn: {
-          "0%": { opacity: 0 },
-          "100%": { opacity: 1 },
+      colors: {
+        brand: {
+          DEFAULT: "#588f27",
+          dark: "#3f6b1a",
+          deep: "#2d4d12",
+          soft: "#e8f0dc",
+          mist: "#f3f7ec",
         },
+        ink: "#141810",
+        muted: "#5a6350",
+        line: "#c5d4ae",
+      },
+      fontFamily: {
+        display: ["var(--font-display)", "serif"],
+        body: ["var(--font-body)", "sans-serif"],
       },
     },
   },
